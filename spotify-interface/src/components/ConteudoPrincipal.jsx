@@ -12,24 +12,27 @@ export default function ConteudoPrincial() {
       .catch(err => console.log(err))
       .finally(() => console.log('Finalizou a requisição'))
   }, [])
-
     return ( 
-        <div className="bg-gray-400 w-3/4 grid grid-cols-3 place-items-center items-center">
+      <div className="bg-gray-400 w-3/4 place-items-center flex-row">
 
-          <h1 className="">Rap</h1>
-          {artistas
-            .filter( artista => artista.genero.
-            includes("Rap"))
-            .map( artista => (
-              <Link to={`/artista/${artista._id}`}>
-                <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
-                  <p>{artista.name}</p>
-                  <p>{artista.genero}</p>
-                  <div className="bg-green-400 w-3/4 h-7"></div>
-                </div>
-              </Link>
-            ))}
-            
-        </div>
+      <h1 className="mt-10 ml-[70px] text-2xl font-bold">Rap</h1>
+
+
+      <div className="flex flex-row justify-around">
+        {artistas
+          .filter(artista => artista.genero.includes("Rap"))
+          .map(artista => (
+            <Link to={`/artista/${artista._id}`} key={artista._id}>
+              <div className="bg-red-500 w-40 h-40 rounded-lg flex flex-col justify-center items-center mt-8 relative"
+                style={{ backgroundImage: `url(${artista.img})`, backgroundSize: 'cover'}}>
+                <p className="text-xl text-white font-semibold absolute bottom-5">{artista.name}</p>
+              </div>
+            </Link>
+          ))}
+      </div>
+
+
+
+    </div>
      );
 }

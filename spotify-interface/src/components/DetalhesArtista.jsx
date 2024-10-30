@@ -16,6 +16,10 @@ export default function DetalhesArtista() {
     }, [])
 
     return (
-        <p>{artistas.name}</p>
+        <div className="m-10 w-3/4">
+            <h1 className="text-4xl font-bold mb-10">{artistas.name}</h1>
+            <img className="w-64 rounded-lg mb-10 " src={artistas.img} />
+            <p className="text-xl">{artistas.bio}</p>
+        </div>
     )
 }
