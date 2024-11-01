@@ -1,5 +1,5 @@
 export default function Header() {
     return (
-        <header className="bg-pink-600 w-full h-28"></header>
+        <header className="bg-cinza-escuro w-full h-28 "></header>
     )
 }
