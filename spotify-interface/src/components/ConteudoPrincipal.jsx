@@ -13,10 +13,10 @@ export default function ConteudoPrincial() {
       .finally(() => console.log('Finalizou a requisição'))
   }, [])
     return ( 
-      <div className="bg-bg w-3/4 place-items-center flex-row">
+      <div className="bg-bg w-3/4 flex-row">
 
       <div>
-        <h1 className="mt-10 ml-20 text-2xl text-white font-bold">Rap</h1>
+        <h1 className="mt-10 ml-40 text-2xl text-white font-bold">Rap</h1>
 
           <div className="flex flex-row justify-around">
             {artistas
@@ -33,7 +33,7 @@ export default function ConteudoPrincial() {
       </div>
 
       <div>
-        <h1 className="mt-10 ml-20 text-2xl text-white font-bold">Pop</h1>
+        <h1 className="mt-10 ml-40 text-2xl text-white font-bold">Pop</h1>
         
           <div className="flex flex-row justify-around">
             {artistas
@@ -50,7 +50,7 @@ export default function ConteudoPrincial() {
       </div>
 
       <div>
-        <h1 className="mt-10 ml-20 text-2xl  text-white font-bold">Funk</h1>
+        <h1 className="mt-10 ml-40 text-2xl  text-white font-bold">Funk</h1>
         
           <div className="flex flex-row justify-around">
             {artistas
